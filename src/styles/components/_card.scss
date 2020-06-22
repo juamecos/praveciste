@@ -1,0 +1,27 @@
+.card {
+  :not(:last-child) {
+    padding: $pd-small;
+  }
+  @include tablet {
+    @include col(6, 12, 0, top);
+  }
+
+  &__inner {
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    font-size: 6rem;
+    color: $color-secondary;
+  }
+  &__title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-left: $mg-medium;
+  }
+  &__text {
+  }
+}

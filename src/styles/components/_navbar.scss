@@ -1,0 +1,128 @@
+.navbar {
+  background-color: $color-primary;
+  color: $color-white;
+  font-size: 2rem;
+  min-height: 6rem;
+
+  // @include mobile {
+  //     padding: 1.2rem 2.5rem;
+  // }
+
+  &__wrapper {
+    padding: 1rem 1rem;
+
+    @include large {
+      align-content: center;
+      display: flex;
+
+      justify-content: space-between;
+      margin: 0 auto;
+
+      width: 80%;
+      max-width: 1170px;
+    }
+  }
+
+  &__header {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 90%;
+
+    @include large {
+      margin: 0;
+      max-width: 100%;
+    }
+  }
+  &__logo {
+    height: 3.8rem;
+    display: flex;
+    align-items: center;
+    &--image {
+      height: 100%;
+      width: 2.6rem;
+    }
+    &--text {
+      height: 100%;
+      width: 5rem;
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+  }
+  &__mobile {
+    &--menu {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: currentColor;
+      @include flex-center;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      @include large {
+        display: none;
+      }
+    }
+    &--text {
+      font-size: 1.2rem;
+      margin-right: 5px;
+    }
+  }
+
+  // Shows nav in mobile burger menu
+
+  .show-nav {
+    height: 215px;
+  }
+
+  &__links {
+    height: 0;
+    overflow: hidden;
+    transition: $mainTransition;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+    @include large {
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: row;
+    }
+
+    & a {
+      display: inline-block;
+      font-size: 1.6rem;
+      letter-spacing: $mainSpacing;
+      text-decoration: none;
+      text-transform: capitalize;
+      transition: $mainTransition;
+      &:hover,
+      &.active {
+        color: lighten($color-secondary, 40%);
+      }
+
+      @include large {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+
+    @include large {
+      &:not(:last-child) {
+        padding-right: 2rem;
+      }
+    }
+  }
+}

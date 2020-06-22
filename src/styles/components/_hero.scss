@@ -1,0 +1,81 @@
+.hero {
+  min-height: calc(60% - 60px);
+  min-height: 40rem;
+  max-width: $container-max-width;
+  margin: 0 auto;
+
+  &__row {
+    @include row;
+  }
+  // @mixin col($col, $sum, $gap: $col-gutter, $align: top)
+  &__left {
+    position: relative;
+    margin: 0 auto;
+    height: 35vh;
+    z-index: 10000;
+
+    @include tablet {
+      @include col(6, 12, 0, top);
+    }
+  }
+
+  &__inner {
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+    width: 90vw;
+    @include tablet {
+      @include col(11, 12, 0, center);
+      top: 10vh;
+      left: 17.5%;
+    }
+    @include large {
+      top: 15vh;
+    }
+
+    @include desktop {
+      left: 10vh;
+    }
+  }
+
+  &__text {
+    font-weight: bold;
+    padding-bottom: $pd-small;
+    line-height: 1.4;
+    text-shadow: 2px 2px 3px $color-shadow;
+    color: $color-primary;
+    @include tablet {
+      padding-bottom: $pd-small;
+    }
+    @include large {
+      padding-bottom: $pd-medium;
+      font-size: 3rem;
+    }
+  }
+
+  &__info {
+    padding-bottom: $pd-small;
+    line-height: 1.5;
+    @include tablet {
+      padding-bottom: $pd-large;
+    }
+    @include large {
+      padding-bottom: $pd-large;
+    }
+  }
+
+  &__right {
+    @include mobile-down {
+      margin-top: 5rem;
+    }
+    @include mobile-portrait {
+      margin-top: -3rem;
+    }
+    @include phablet-portrait {
+      margin-top: 0;
+    }
+    @include tablet {
+      @include col(6, 12, 0, top);
+    }
+  }
+}

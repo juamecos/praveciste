@@ -1,0 +1,36 @@
+.banner {
+  max-width: 70%;
+  padding: $pd-small $pd-tiny;
+
+  @include flex-center-column;
+
+  @include mobile {
+    max-width: 80%;
+    padding: $pd-medium $pd-small;
+  }
+
+  @include large {
+    max-width: 60%;
+  }
+
+  @include desktop {
+    max-width: 50%;
+  }
+
+  &__title {
+    width: 90%;
+    padding-bottom: $pd-small;
+
+    @include mobile {
+      font-size: 5rem;
+      padding-bottom: $pd-medium;
+    }
+  }
+  &__info {
+    font-family: $font-primary;
+    font-size: 1.8rem;
+    line-height: 1.3;
+    padding-bottom: $pd-small;
+    text-align: center;
+  }
+}

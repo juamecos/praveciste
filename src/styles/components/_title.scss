@@ -1,0 +1,25 @@
+.title {
+  padding-bottom: $pd-big;
+  text-align: center;
+  text-shadow: 2px 2px 3px $color-shadow;
+
+  &__title {
+    color: $color-primary;
+    font-size: 2.4rem;
+    padding-bottom: $pd-tiny;
+  }
+
+  &__message {
+    color: $color-secondary;
+    font-size: 2.4rem;
+    font-weight: 400;
+    padding-bottom: $pd-tiny;
+  }
+
+  &__underline {
+    background-color: $color-secondary;
+    height: 0.3rem;
+    margin: 0 auto;
+    width: 8rem;
+  }
+}

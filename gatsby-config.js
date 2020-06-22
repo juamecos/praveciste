@@ -1,8 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Uklidim.cz`,
+    description: `Nejlepší úklidová společnost v Brně, naši klienti oceňují, jak pracujeme.`,
+    author: `@JuanJoseMenaCost`,
+    logo: "PraveCiste",
+    menuLinks: [
+      { name: "Úvod", link: "/" },
+      { name: "Jednorázový úklid", link: "/jednorazovy" },
+      { name: "Pravidelný úklid", link: "/pravidelny" },
+      { name: "Kontakt", link: "/kontakt" },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -15,6 +22,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -27,6 +35,16 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        google: {
+          families: ["Open Sans", "Montserrat", "Source Sans Pro"],
+        },
+      },
+    },
+    `gatsby-plugin-sass`,
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

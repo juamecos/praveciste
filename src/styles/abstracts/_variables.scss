@@ -1,0 +1,53 @@
+// Container-max-width
+$container-max-width: 1200px;
+
+// colors
+$color-body: #fcfcfc;
+$color-white: #fff;
+$color-white-dirty: #e0dfdf;
+
+$color-primary-dark: darken(#1d428a, 20%);
+$color-primary: #1d428a;
+$color-primary-light: lighten(#1d428a, 20%);
+$color-secondary: #007e8a;
+
+$color-shadow: #757a848a;
+
+//fonts
+$font-big: "Montserrat", sans-serif;
+$font-primary: "Open Sans", sans-serif;
+$font-secondary: "Source Sans Pro", cursive;
+
+// paddings
+$pd-tiny: 1rem;
+$pd-small: 2rem;
+$pd-medium: 3rem;
+$pd-large: 4rem;
+$pd-big: 6rem;
+$pd-huge: 8rem;
+
+//margins
+$mg-tiny: 1rem;
+$mg-small: 2rem;
+$mg-medium: 3rem;
+$mg-large: 4rem;
+$mg-big: 6rem;
+$mg-huge: 8rem;
+
+$mainSpacing: 0.3rem;
+$mainTransition: all 0.4s linear;
+
+// Shadows
+
+$logo-shadow: 2px 2px 1px $color-secondary;
+
+$light-shadow: 2px 5px 3px 0px $color-shadow;
+$dark-shadow: 4px 10px 5px 0px $color-shadow;
+
+// container
+
+$container-width: 90%;
+$container-margin: $pd-medium;
+
+// grid system - Column gutter
+$col-gutter: 2rem;

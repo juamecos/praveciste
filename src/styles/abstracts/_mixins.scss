@@ -1,0 +1,249 @@
+// This file contains mixins
+
+// Box
+
+@mixin box($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+//   /* ===== Usage ===== */
+//   div {
+//     // You can pass width && height
+//     @include box(200px, 300px);
+//     /* or just pass width and the height
+//        will default to the width value */
+//     @include box(200px);
+//   }
+
+// Flexbox toolkit
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-center-column {
+  @include flex-center;
+  flex-direction: column;
+}
+
+@mixin flex-center-vert {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center-horiz {
+  display: flex;
+  justify-content: center;
+}
+
+//   /* ===== Usage ===== */
+// .vertical-centered-element {
+//     @include flex-center-vert;
+//   }
+
+//   .horizontally-centered-element {
+//     flex-direction: column;
+//     @include flex-center-vert;
+//   }
+
+// position center
+@mixin position-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//   /* ===== Usage ===== */
+// .centered-element {
+//     @include position-center;
+//   }
+
+// Font size
+
+@mixin font-size($font-size, $line-height: normal, $letter-spacing: normal) {
+  font-size: $font-size * 1px;
+  // font-size: $font-size * 0.1rem;
+  // example using rem values and 62.5% font-size so 1rem = 10px
+
+  @if $line-height==normal {
+    line-height: normal;
+  } @else {
+    line-height: $line-height / $font-size;
+  }
+
+  @if $letter-spacing==normal {
+    letter-spacing: normal;
+  } @else {
+    letter-spacing: #{$letter-spacing / $font-size}em;
+  }
+}
+
+//   /* ===== Usage ===== */
+//   p {
+//     @include font-size(12, 18, 1.2);
+//     // returns
+//     font-size: 12px;
+//     line-height: 1.5; // 18 / 12
+//     letter-spacing: 0.1em;
+//   }
+
+// Cover background
+
+@mixin cover-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+//   /* ===== Usage ===== */
+//   div {
+//     background-image: url("cute-doggo.png");
+//     @include cover-background;
+//   }
+
+// Media queries
+$tiny: 320;
+$mobile: 576;
+$tablet: 768;
+$large: 1024;
+$desktop: 1280;
+
+@mixin mobile-down {
+  @media only screen and (max-width: 350px) {
+    @content;
+  }
+}
+@mixin mobile-portrait {
+  @media only screen and (min-height: $tiny * 1px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (min-width: $mobile * 1px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: $tablet * 1px) {
+    @content;
+  }
+}
+@mixin phablet-portrait {
+  @media only screen and (min-width: $tablet * 1px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: $large * 1px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: $desktop * 1px) {
+    @content;
+  }
+}
+
+// /* ===== Usage ===== */
+// h1 {
+//   font-size: 10px;
+
+//   @include tablet {
+//     font-size: 12px;
+//   }
+
+//   @include desktop {
+//     font-size: 20px;
+//   }
+// }
+
+@mixin row() {
+  font-size: 0;
+  &:first-child {
+    padding-left: 0 !important;
+  }
+  &:last-child {
+    padding-right: 0 !important;
+  }
+}
+@mixin col($col, $sum, $gap: $col-gutter, $align: top) {
+  width: percentage($col/$sum);
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: $align;
+  box-sizing: border-box;
+  padding-left: $gap / 2;
+  padding-right: $gap / 2;
+  @media only screen and (min-width: 768px) {
+    width: percentage($col/$sum);
+    vertical-align: $align;
+  }
+}
+
+// /* ===== Usage ===== */
+// For 3 column with 10% gap
+// Salign: baseline|length|sub|super|top|text-top|middle|bottom|text-bottom|initial|inherit;
+//default gutter 20
+// .col-2 {
+//   @include row;
+//   @include col(2, 12, 10%, middle);
+// }
+// .col-3 {
+//   @include row;
+//   @include col(3, 12, 15%, middle);
+// }
+// .col-4 {
+//   @include row;
+//   @include col(4, 12, 10%, middle);
+// }
+// .col-5 {
+//   @include row;
+//   @include col(5, 12, 10%, middle);
+// }
+// .col-6 {
+//   @include row;
+//   @include col(6, 12, 10%, middle);
+// }
+// .col-8 {
+//   @include row;
+//   @include col(8, 12, 10%, middle);
+// }
+// .col-9 {
+//   @include row;
+//   @include col(9, 12, 10%, middle);
+// }
+// .col-10 {
+//   @include row;
+//   @include col(10, 12, 10%, middle);
+// }
+// .col-11 {
+//   @include row;
+//   @include col(11, 12, 10%, middle);
+// }
+// .col-12 {
+//   @include row;
+//   @include col(12, 12, 10%, middle);
+// }
+// <div className="row">
+// <div className="col-5">
+//   <div>Hello</div>
+// </div>
+// <div className="col-5">
+//   <div>Hello</div>
+// </div>
+// <div className="col-2">
+//   <div>Hello</div>
+// </div>
+// </div>

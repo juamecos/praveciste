@@ -1,0 +1,43 @@
+.btn {
+  cursor: pointer;
+  display: block;
+  font-family: $font-secondary;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  padding: $pd-tiny $pd-medium;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: $mainTransition;
+
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+
+  &--cta {
+    width: fit-content;
+    background-color: transparent;
+    color: $color-primary;
+    border: 2px solid $color-primary;
+    border-radius: 10rem;
+    &:hover {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+  }
+
+  &--section {
+    background-color: transparent;
+    border: 2px solid $color-primary-dark;
+    color: $color-primary-dark;
+    margin: 0 auto;
+    max-width: fit-content;
+    text-align: center;
+
+    &:hover {
+      background-color: $color-primary-dark;
+      color: $color-white;
+    }
+  }
+}

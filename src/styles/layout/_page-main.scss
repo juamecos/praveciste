@@ -1,0 +1,10 @@
+// This makes to keep the footer on the bottom
+.flex-this-box {
+  @include flex-column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+  overflow: hidden;
+}
