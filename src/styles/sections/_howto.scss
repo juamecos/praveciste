@@ -1,0 +1,29 @@
+.howto {
+  &__left {
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &:not(:last-child) {
+      padding-bottom: $pd-small;
+    }
+  }
+  &__image {
+    min-width: 200px;
+  }
+
+  &__text {
+    color: $color-primary-light;
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  &__right {
+    padding: 4rem;
+  }
+  &__paragraph {
+    padding-bottom: $pd-small;
+  }
+}

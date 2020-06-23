@@ -1,0 +1,22 @@
+.satisfaction {
+  background-color: $color-white-dirty;
+  padding: $pd-big $pd-big;
+
+  &__box {
+    @include flex-center-column;
+  }
+  &__title {
+    color: $color-primary-dark;
+    font-size: 2.4rem;
+    font-weight: 700;
+    padding-bottom: $pd-medium;
+  }
+
+  &__icon {
+    font-size: 2.4rem;
+  }
+
+  &__text {
+    padding-left: $pd-tiny;
+  }
+}

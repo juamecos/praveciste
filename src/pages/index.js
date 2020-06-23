@@ -5,12 +5,16 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import Hero from "../components/Hero"
 import SectionAbout from "../components/Sections/About"
+import Satisfaction from "../components/Sections/Satisfaction"
+import HowTo from "../components/Sections/HowTo"
 
 const Index = ({ data }) => (
   <Layout>
     <SEO title="Úvod" />
     <Hero />
     <SectionAbout />
+    <Satisfaction />
+    <HowTo />
   </Layout>
 )
 
