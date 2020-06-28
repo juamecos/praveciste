@@ -1,0 +1,91 @@
+.footer {
+  background-color: $color-primary;
+  color: white;
+
+  &__container {
+    text-align: center;
+
+    @include tablet {
+      text-align: left;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__column {
+    margin-bottom: $mg-large;
+  }
+
+  &__logo {
+    font-size: 3rem;
+    margin-bottom: $mg-large;
+  }
+
+  &__title {
+    margin-bottom: $mg-tiny;
+
+    @include tablet {
+      display: flex;
+      justify-content: start;
+    }
+  }
+
+  &__icon {
+    padding-right: $pd-tiny;
+  }
+
+  &__text {
+    & p {
+      padding: 0;
+    }
+  }
+
+  &__links {
+    overflow: hidden;
+    transition: $mainTransition;
+
+    @include large {
+      height: auto;
+      display: flex;
+      align-items: start;
+      justify-content: space-evenly;
+      flex-direction: column;
+    }
+
+    & a {
+      display: inline-block;
+      font-size: 1.6rem;
+      letter-spacing: $mainSpacing;
+      text-decoration: none;
+      text-transform: capitalize;
+      transition: $mainTransition;
+      &:hover,
+      &.active {
+        color: lighten($color-secondary, 40%);
+      }
+
+      @include large {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__divider {
+    background-color: #456196;
+    height: 1px;
+    margin: $mg-tiny auto;
+    width: 90%;
+  }
+
+  &__copyright {
+    font-size: 1rem;
+  }
+}

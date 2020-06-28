@@ -1,8 +1,8 @@
 import React from "react"
 
-const Card = ({ name, icon, text, key }) => {
+const Card = ({ name, icon, text, classname }) => {
   return (
-    <div className="card" key={key}>
+    <div className={`card ${classname}`}>
       <div className="card__inner">
         <div className="card__container">
           <div className="card__icon">{icon}</div>

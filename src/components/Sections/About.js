@@ -2,7 +2,7 @@ import React from "react"
 
 import Section from "../Section"
 
-import aboutServices from "../constants/aboutServices"
+import aboutServices from "../../constants/aboutServices"
 import Card from "../Card"
 import uuid from "react-uuid"
 
@@ -17,7 +17,15 @@ const SectionAbout = () => {
       <p>Stačí nám poslat WhatsApp a my se postaráme o zbytek</p>
       <div className="about__services">
         {aboutServices.map(item => {
-          return <Card name={item.name} icon={item.icon} text="" key={uuid()} />
+          return (
+            <Card
+              name={item.name}
+              icon={item.icon}
+              text=""
+              key={uuid()}
+              classname="about__card"
+            />
+          )
         })}
       </div>
     </Section>

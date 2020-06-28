@@ -1,8 +1,8 @@
 .hero {
   min-height: calc(60% - 60px);
-  min-height: 40rem;
   max-width: $container-max-width;
   margin: 0 auto;
+  overflow: hidden;
 
   &__row {
     @include row;
@@ -21,7 +21,7 @@
 
   &__inner {
     position: absolute;
-    top: 5vh;
+    top: 4vh;
     left: 5vw;
     width: 90vw;
     @include tablet {
@@ -30,7 +30,7 @@
       left: 17.5%;
     }
     @include large {
-      top: 15vh;
+      top: 12vh;
     }
 
     @include desktop {
@@ -65,6 +65,7 @@
   }
 
   &__right {
+    height: 50vh;
     @include mobile-down {
       margin-top: 5rem;
     }

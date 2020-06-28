@@ -1,5 +1,4 @@
 import React from "react"
-import Section from "../Section"
 import { FaPhoneAlt } from "react-icons/fa"
 
 const Satisfaction = () => {
@@ -15,7 +14,7 @@ const Satisfaction = () => {
           alt={`Link to call`}
         >
           <FaPhoneAlt className="satisfaction__icon" />
-          <p className="satisfaction__text">Zavolejte nám</p>
+          <p className="satisfaction__text">Zavolejte</p>
         </a>
       </div>
     </div>

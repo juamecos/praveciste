@@ -7,6 +7,8 @@ import Hero from "../components/Hero"
 import SectionAbout from "../components/Sections/About"
 import Satisfaction from "../components/Sections/Satisfaction"
 import HowTo from "../components/Sections/HowTo"
+import Guarantee from "../components/Sections/Guarantee"
+import Testimonials from "../components/Sections/Testimonials"
 
 const Index = ({ data }) => (
   <Layout>
@@ -15,6 +17,8 @@ const Index = ({ data }) => (
     <SectionAbout />
     <Satisfaction />
     <HowTo />
+    <Guarantee />
+    <Testimonials />
   </Layout>
 )
 

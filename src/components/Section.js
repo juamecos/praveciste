@@ -3,7 +3,7 @@ import Title from "./Title"
 
 const Section = ({ children, classname, title, message }) => {
   return (
-    <section className={`section ${classname}`}>
+    <section className={`section section-${classname}`}>
       <div className="section__container">
         <div className="section__inner">
           <Title title={title} message={message} />

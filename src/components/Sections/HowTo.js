@@ -19,33 +19,37 @@ const HowTo = () => {
   const images = Object.values(imagesObject)
 
   return (
-    <Section className="howto">
+    <Section className="howto" title="Jak to funguje" classname="howto">
       <div className="howto__left">
         {images.map((item, index) => (
           <HowToCard
             fluid={item.childImageSharp.fluid}
             text={howToCardText[index]}
+            key={index}
           />
         ))}
       </div>
       <div className="howto__right">
-        <Title title="Zůstat v klidu a dýchat" />
-        <p className="howto__paragraph">
-          V PraveCiste je zdraví a bezpečnost našich zákazníků a zaměstnanců
-          vždy naší nejvyšší prioritou. Náš proces je 100% přátelský k sociální
-          vzdálenosti. Naplánujte si službu telefonicky, při příjezdu obdržíte
-          textovou zprávu a relaxujte, zatímco my se postaráme o zbytek.
-        </p>
-        <a
-          href="tel:+420605476520"
-          className="btn btn--cta"
-          target="_blank"
-          rel="noopener noreferrer"
-          alt={`Link to call`}
-        >
-          <FaPhoneAlt className="satisfaction__icon" />
-          <p className="satisfaction__text">Zavolejte nám</p>
-        </a>
+        <div className="howto__right--wrapper">
+          <Title title="Zůstat v klidu a dýchat" />
+          <p className="howto__paragraph">
+            V PraveCiste je zdraví a bezpečnost našich zákazníků a zaměstnanců
+            vždy naší nejvyšší prioritou. Náš proces je 100% přátelský k
+            sociální vzdálenosti. Naplánujte si službu telefonicky, při příjezdu
+            obdržíte textovou zprávu a relaxujte, zatímco my se postaráme o
+            zbytek.
+          </p>
+          <a
+            href="tel:+420605476520"
+            className="btn btn--cta btn--call"
+            target="_blank"
+            rel="noopener noreferrer"
+            alt={`Link to call`}
+          >
+            <FaPhoneAlt className="satisfaction__icon" />
+            <p className="satisfaction__text">Zavolejte</p>
+          </a>
+        </div>
       </div>
     </Section>
   )

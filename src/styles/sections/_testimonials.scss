@@ -1,0 +1,37 @@
+.testimonials {
+  &__card {
+    &:not(:last-child) {
+      margin-bottom: $mg-medium;
+    }
+    @include mobile {
+      display: flex;
+      min-height: 120px;
+    }
+  }
+
+  &__image {
+    display: block !important;
+    min-width: 100px;
+    max-height: 100px;
+    margin: 0 auto $mg-small;
+    border-radius: 20rem;
+    box-shadow: $light-shadow;
+  }
+
+  &__left {
+    margin-left: $mg-small;
+  }
+
+  &__name {
+    font-weight: bold;
+    margin-bottom: $mg-tiny;
+    letter-spacing: 0.2rem;
+    text-align: center;
+
+    @include mobile {
+      margin-left: -120px;
+    }
+  }
+  &__text {
+  }
+}
