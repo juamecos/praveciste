@@ -19,7 +19,6 @@ const imageQuery = graphql`
 const BackgroundSection = ({ className, children, home, image }) => {
   const data = useStaticQuery(imageQuery)
   const imageData = data.desktop.childImageSharp.fluid
-  console.log(imageData)
 
   return (
     <BackgroundImage

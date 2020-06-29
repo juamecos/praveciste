@@ -1,0 +1,60 @@
+import React from "react"
+import priceServices from "../../constants/prices"
+const PriceTable = title => {
+  return (
+    <div className="prices">
+      {priceServices.map((price, index) => {
+        return (
+          <article className="prices__article">
+            <h2 className="prices__heading">{price.title}</h2>
+            <table className="prices__table">
+              <tbody className="prices__body">
+                {price.items.map(item => createRow(item))}
+              </tbody>
+            </table>
+          </article>
+        )
+      })}
+    </div>
+  )
+}
+
+export default PriceTable
+
+const createRow = ({ name, price, unit }) => {
+  // const unitName = isNaN(parseInt(unit.slice(-1)))
+  //   ? unit
+  //   : console.log("es numero")
+  return (
+    <tr className="prices__row">
+      <td className="prices__cell--name">
+        <h3 className="prices__name">{name}</h3>
+      </td>
+      <td className="prices__cell--price">
+        <h4 className="prices__price">
+          <span>{`${price}`}</span>
+          {unitName(unit)}
+        </h4>
+      </td>
+    </tr>
+  )
+}
+
+// This function check if unit's last character is a number
+//if it is, it makes it superindex
+
+const unitName = unit => {
+  const lastChar = parseInt(unit.slice(-1))
+  const beginning = unit.slice(0, -1)
+
+  if (isNaN(lastChar)) {
+    return <span>{` ${unit}`}</span>
+  } else {
+    return (
+      <span>
+        {` ${beginning}`}
+        <span className="prices__superindex">{lastChar}</span>
+      </span>
+    )
+  }
+}
