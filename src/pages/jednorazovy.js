@@ -3,11 +3,9 @@ import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import BackgroundSection from "../components/BackgroundSection"
 import PriceTable from "../components/Sections/PriceTable"
-import priceServices from "../constants/prices"
 import Section from "../components/Section"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 const sluzby = ({ data }) => {
-  console.log(priceServices)
-
   return (
     <Layout>
       <BackgroundSection
@@ -16,6 +14,14 @@ const sluzby = ({ data }) => {
       ></BackgroundSection>
       <Section title="Jednorázové" message="služby" classname="prices">
         <PriceTable />
+        <AniLink
+          fade
+          to="/kontakt"
+          className="btn btn--cta btn--call"
+          alt="button to kontakt page"
+        >
+          Zdarma odhad
+        </AniLink>
       </Section>
     </Layout>
   )

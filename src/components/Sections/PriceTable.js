@@ -1,15 +1,17 @@
 import React from "react"
 import priceServices from "../../constants/prices"
-const PriceTable = title => {
+const PriceTable = path => {
+  console.log(path)
+
   return (
     <div className="prices">
-      {priceServices.map((price, index) => {
+      {priceServices.map((price, index, path) => {
         return (
-          <article className="prices__article">
+          <article className="prices__article" key={index}>
             <h2 className="prices__heading">{price.title}</h2>
             <table className="prices__table">
               <tbody className="prices__body">
-                {price.items.map(item => createRow(item))}
+                {price.items.map((price, index) => createRow(price, index))}
               </tbody>
             </table>
           </article>
@@ -21,12 +23,12 @@ const PriceTable = title => {
 
 export default PriceTable
 
-const createRow = ({ name, price, unit }) => {
+const createRow = ({ name, price, unit }, index) => {
   // const unitName = isNaN(parseInt(unit.slice(-1)))
   //   ? unit
   //   : console.log("es numero")
   return (
-    <tr className="prices__row">
+    <tr className="prices__row" key={index}>
       <td className="prices__cell--name">
         <h3 className="prices__name">{name}</h3>
       </td>
@@ -58,3 +60,16 @@ const unitName = unit => {
     )
   }
 }
+
+// Set price according to the path as pravidelny prices are dealt ""
+
+// const createPrice = (unit, path) => {
+//   path === "/pravidelny" ? (
+//     <h4 className="prices__price">"dohodou"</h4>
+//   ) : (
+//     <h4 className="prices__price">
+//       <span>{`${price}`}</span>
+//       {unitName(unit)}
+//     </h4>
+//   )
+// }
