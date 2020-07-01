@@ -1,17 +1,17 @@
 import React from "react"
 import priceServices from "../../constants/prices"
-const PriceTable = path => {
-  console.log(path)
+const PriceTable = ({ path }) => {
+  const route = path
 
   return (
     <div className="prices">
-      {priceServices.map((price, index, path) => {
+      {priceServices.map((item, index) => {
         return (
           <article className="prices__article" key={index}>
-            <h2 className="prices__heading">{price.title}</h2>
+            <h2 className="prices__heading">{item.title}</h2>
             <table className="prices__table">
               <tbody className="prices__body">
-                {price.items.map((price, index) => createRow(price, index))}
+                {item.items.map((item, index) => createRow(item, index))}
               </tbody>
             </table>
           </article>
@@ -23,20 +23,20 @@ const PriceTable = path => {
 
 export default PriceTable
 
-const createRow = ({ name, price, unit }, index) => {
-  // const unitName = isNaN(parseInt(unit.slice(-1)))
-  //   ? unit
-  //   : console.log("es numero")
+const createRow = ({ name, price, priceRegular }, index, path) => {
   return (
     <tr className="prices__row" key={index}>
       <td className="prices__cell--name">
         <h3 className="prices__name">{name}</h3>
       </td>
       <td className="prices__cell--price">
-        <h4 className="prices__price">
-          <span>{`${price}`}</span>
-          {unitName(unit)}
-        </h4>
+        {
+          (path = "/pravidelny/" ? (
+            <h4 className="prices__price">{unitName(priceRegular)}</h4>
+          ) : (
+            <h4 className="prices__price">{unitName(price)}</h4>
+          ))
+        }
       </td>
     </tr>
   )
@@ -45,19 +45,18 @@ const createRow = ({ name, price, unit }, index) => {
 // This function check if unit's last character is a number
 //if it is, it makes it superindex
 
-const unitName = unit => {
-  const lastChar = parseInt(unit.slice(-1))
-  const beginning = unit.slice(0, -1)
-
-  if (isNaN(lastChar)) {
-    return <span>{` ${unit}`}</span>
-  } else {
+const unitName = (price, route) => {
+  const lastChar = parseInt(price.slice(-1))
+  const beginning = price.slice(0, -1)
+  if (!isNaN(lastChar)) {
     return (
       <span>
         {` ${beginning}`}
         <span className="prices__superindex">{lastChar}</span>
       </span>
     )
+  } else {
+    return <span>{` ${price}`}</span>
   }
 }
 

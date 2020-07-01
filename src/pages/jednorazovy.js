@@ -5,7 +5,8 @@ import BackgroundSection from "../components/BackgroundSection"
 import PriceTable from "../components/Sections/PriceTable"
 import Section from "../components/Section"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-const sluzby = ({ data }) => {
+const sluzby = ({ data, location }) => {
+  const path = location
   return (
     <Layout>
       <BackgroundSection
@@ -13,7 +14,7 @@ const sluzby = ({ data }) => {
         image={data.hero.childImageSharp.fluid}
       ></BackgroundSection>
       <Section title="Jednorázové" message="služby" classname="prices">
-        <PriceTable />
+        <PriceTable path={path} />
         <AniLink
           fade
           to="/kontakt"

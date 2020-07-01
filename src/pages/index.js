@@ -9,7 +9,7 @@ import Satisfaction from "../components/Sections/Satisfaction"
 import HowTo from "../components/Sections/HowTo"
 import Guarantee from "../components/Sections/Guarantee"
 import Testimonials from "../components/Sections/Testimonials"
-
+import CookieConsent, { Cookies } from "react-cookie-consent"
 const Index = ({ data }) => (
   <Layout>
     <SEO title="Úvod" />

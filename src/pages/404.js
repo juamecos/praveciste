@@ -9,6 +9,7 @@ const error = ({ data }) => {
     <Layout>
       <SEO title="Error" />
       <BackgroundSection
+        home
         className="error-hero"
         image={data.file.childImageSharp.fluid}
         style={{

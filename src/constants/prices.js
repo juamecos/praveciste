@@ -4,54 +4,66 @@ export default [
     items: [
       {
         name: "mycím automatem",
-        price: "od 6",
-        unit: "kč/m2",
+        price: "od 6 kč/m2",
+        priceRegular: "dohodou",
       },
       {
         name: "kotoučovým strojem a odsávání průmyslovým vysavačem",
-        price: "od 18",
-        unit: "kč/m2",
+        price: "od 18 kč/m2",
+        priceRegular: "dohodou",
       },
       {
         name: "+ ochranná emulze (vosk)",
-        price: "od 65",
-        unit: "kč/m2",
+        price: "od 65 kč/m2",
+        priceRegular: "dohodou",
       },
     ],
   },
   {
     title: "Mytí",
     items: [
-      { name: "oken", price: "od 18", unit: "kč/m2" },
-      { name: "výloh", price: "od 15", unit: "kč/m2" },
+      { name: "oken", price: "od 18 kč/m2", priceRegular: "dohodou" },
+      { name: "výloh", price: "od 15 kč/m2", priceRegular: "dohodou" },
     ],
   },
   {
     title: "Čištění",
-    items: [{ name: "žaluzii", price: "44", unit: "kč/m2" }],
+    items: [{ name: "žaluzii", price: "44 kč/m2", priceRegular: "dohodou" }],
   },
   {
     title: "Vysávání",
-    items: [{ name: "koberců", price: "8", unit: "kč/m2" }],
+    items: [{ name: "koberců", price: "8 kč/m2", priceRegular: "dohodou" }],
   },
   {
     title: "Čištění koberců ",
     items: [
-      { name: "extrakční metodou", price: "od 17", unit: "kč/m2" },
+      {
+        name: "extrakční metodou",
+        price: "od 17 kč/m2",
+        priceRegular: "dohodou",
+      },
       {
         name: "kotoučovým strojem + extraktorem",
-        price: "od 22",
-        unit: "kč/m2",
+        price: "od 22 kč/m2",
+        priceRegular: "dohodou",
       },
     ],
   },
   {
     title: "Čištění čalounění extrakční metodou ",
     items: [
-      { name: "sedací souprava", price: "270", unit: "kč/misto" },
-      { name: "křeslo", price: "270", unit: "kč/ks" },
-      { name: "postel", price: "350", unit: "kč/ks" },
-      { name: "kancelářské židle", price: "100", unit: "kč/ks" },
+      {
+        name: "sedací souprava",
+        price: "270 kč/misto",
+        priceRegular: "dohodou",
+      },
+      { name: "křeslo", price: "270 kč/ks", priceRegular: "dohodou" },
+      { name: "postel", price: "350 kč/ks", priceRegular: "dohodou" },
+      {
+        name: "kancelářské židle",
+        price: "100 kč/ks",
+        priceRegular: "dohodou",
+      },
     ],
   },
   {
@@ -60,12 +72,12 @@ export default [
       {
         name: "osobní automobil",
         price: "9",
-        unit: "kč/km",
+        priceRegular: "dohodou",
       },
       {
         name: "dodávka",
         price: "14",
-        unit: "kč/km",
+        priceRegular: "dohodou",
       },
     ],
   },
