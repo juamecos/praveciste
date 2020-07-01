@@ -34,7 +34,7 @@ export const query = graphql`
     hero: file(relativePath: { eq: "vacuum-cleaner-2.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }

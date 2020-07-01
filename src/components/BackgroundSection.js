@@ -9,7 +9,7 @@ const imageQuery = graphql`
     desktop: file(relativePath: { eq: "arroba2.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1200) {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
@@ -35,10 +35,6 @@ const BackgroundSection = ({ className, children, home, image }) => {
 const StyledBackgroundSection = styled(BackgroundSection)`
   min-height: ${props => (props.home ? "calc(100vh - 62px)" : "50vh")};
   opacity: 1 !important; /* default 0.99 so filter won't work*/
-  background: ${props =>
-    props.home
-      ? "linear-gradient(rgba(49, 93, 85, 0.7019607843137254) 0%, rgba(219, 236, 253, 0.7) 82%, rgba(216, 216, 216, 0.7) 92%) 50% 50% / cover"
-      : "none"};
   background-position: center;
   background-size: cover;
   background-attachment: fixed;

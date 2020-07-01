@@ -4,10 +4,11 @@
 
   &__container {
     text-align: center;
+    font-size: 1.6rem;
+  }
 
-    @include tablet {
-      text-align: left;
-    }
+  @include large {
+    font-size: 1.8rem;
   }
 
   &__content {
@@ -34,7 +35,7 @@
 
     @include tablet {
       display: flex;
-      justify-content: start;
+      justify-content: flex-start;
     }
   }
 
@@ -45,35 +46,36 @@
   &__text {
     & p {
       padding: 0;
+
+      @include tablet {
+        text-align: left;
+      }
     }
   }
 
   &__links {
     overflow: hidden;
     transition: $mainTransition;
+    height: 100%;
 
-    @include large {
+    @include tablet {
       height: auto;
       display: flex;
-      align-items: start;
+      align-items: flex-start;
       justify-content: space-evenly;
       flex-direction: column;
     }
 
     & a {
       display: inline-block;
-      font-size: 1.6rem;
       letter-spacing: $mainSpacing;
+      padding-top: 0.7rem;
       text-decoration: none;
       text-transform: capitalize;
       transition: $mainTransition;
       &:hover,
       &.active {
         color: lighten($color-secondary, 40%);
-      }
-
-      @include large {
-        font-size: 1.4rem;
       }
     }
   }

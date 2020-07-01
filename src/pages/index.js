@@ -9,7 +9,7 @@ import Satisfaction from "../components/Sections/Satisfaction"
 import HowTo from "../components/Sections/HowTo"
 import Guarantee from "../components/Sections/Guarantee"
 import Testimonials from "../components/Sections/Testimonials"
-import CookieConsent, { Cookies } from "react-cookie-consent"
+
 const Index = ({ data }) => (
   <Layout>
     <SEO title="Úvod" />
@@ -40,7 +40,7 @@ export const query = graphql`
     hero: file(relativePath: { eq: "girl.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1900) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }

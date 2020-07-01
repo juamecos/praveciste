@@ -40,7 +40,7 @@ export const query = graphql`
     file(relativePath: { eq: "question-mark.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1900) {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }

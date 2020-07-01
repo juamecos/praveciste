@@ -71,12 +71,12 @@ export default [
     items: [
       {
         name: "osobní automobil",
-        price: "9",
+        price: "9 kč/km",
         priceRegular: "dohodou",
       },
       {
         name: "dodávka",
-        price: "14",
+        price: "14 kč/km",
         priceRegular: "dohodou",
       },
     ],

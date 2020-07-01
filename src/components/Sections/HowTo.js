@@ -62,35 +62,35 @@ export const getImages = graphql`
     phone: file(relativePath: { eq: "cellphone.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1900) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
     message: file(relativePath: { eq: "messagegirl.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1900) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
     sofa: file(relativePath: { eq: "sofa.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1900) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
     cleaning: file(relativePath: { eq: "cleaning.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1900) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
     callcenter: file(relativePath: { eq: "callcenter.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1900) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }

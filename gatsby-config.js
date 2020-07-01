@@ -45,8 +45,17 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
 
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `PraveCiste`,
+        short_name: `PraveCiste`,
+        start_url: `/`,
+        background_color: `#1d428a`,
+        theme_color: `#1d428a`,
+        display: `standalone`,
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 }

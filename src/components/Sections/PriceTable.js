@@ -2,6 +2,7 @@ import React from "react"
 import priceServices from "../../constants/prices"
 const PriceTable = ({ path }) => {
   const route = path
+  console.log(route)
 
   return (
     <div className="prices">
@@ -11,32 +12,33 @@ const PriceTable = ({ path }) => {
             <h2 className="prices__heading">{item.title}</h2>
             <table className="prices__table">
               <tbody className="prices__body">
-                {item.items.map((item, index) => createRow(item, index))}
+                {item.items.map((item, index) => createRow(item, index, route))}
               </tbody>
             </table>
           </article>
         )
       })}
+      <article className="prices__disclaimer">
+        Všechny ceny jsou uvedeny bez DPH.
+      </article>
     </div>
   )
 }
 
 export default PriceTable
 
-const createRow = ({ name, price, priceRegular }, index, path) => {
+const createRow = ({ name, price, priceRegular }, index, route) => {
   return (
     <tr className="prices__row" key={index}>
       <td className="prices__cell--name">
         <h3 className="prices__name">{name}</h3>
       </td>
       <td className="prices__cell--price">
-        {
-          (path = "/pravidelny/" ? (
-            <h4 className="prices__price">{unitName(priceRegular)}</h4>
-          ) : (
-            <h4 className="prices__price">{unitName(price)}</h4>
-          ))
-        }
+        {route === "/pravidelny" ? (
+          <h4 className="prices__price">{unitName(priceRegular)}</h4>
+        ) : (
+          <h4 className="prices__price">{unitName(price)}</h4>
+        )}
       </td>
     </tr>
   )

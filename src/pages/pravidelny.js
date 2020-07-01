@@ -35,7 +35,7 @@ export const query = graphql`
     file(relativePath: { eq: "chairs.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 3000) {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }

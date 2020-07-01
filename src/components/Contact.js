@@ -5,11 +5,7 @@ const Contact = () => {
     <section className="contact">
       <div className="contact__center">
         <Title title="Kontaktujte" message="nás" />
-        <form
-          action="" //TODO connect to formspree
-          method="POST"
-          className="contact__form"
-        >
+        <form action="" method="POST" className="contact__form">
           <div>
             <label htmlFor="name">jméno</label>
             <input
