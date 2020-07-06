@@ -1,5 +1,4 @@
 import React from "react"
-import priceServices from "../../constants/prices"
 import { useStaticQuery, graphql } from "gatsby"
 const PriceTable = ({ path }) => {
   const route = path
