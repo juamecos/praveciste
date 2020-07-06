@@ -2,7 +2,7 @@ import React from "react"
 import { useState } from "react"
 import { FaAlignJustify } from "react-icons/fa"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-// import loadable from "@loadable/component"
+import { useStaticQuery, graphql } from "gatsby"
 
 const Navbar = ({ data }) => {
   const [isOpen, setNav] = useState(false)
@@ -10,13 +10,20 @@ const Navbar = ({ data }) => {
     setNav(isOpen => !isOpen)
   }
   const navLinksClass = isOpen ? `navbar__links show-nav` : `navbar__links`
+  const { sitename } = useStaticQuery(getSiteName)
 
   return (
     <div className="navbar">
       <div className="navbar__wrapper">
         <div className="navbar__header">
           <AniLink activeClassName="active" fade to={"/"} alt={`Link to uvos`}>
-            {<div className="navbar__logo">{data.site.siteMetadata.logo}</div>}
+            {
+              <div className="navbar__logo">
+                {sitename.sitename
+                  ? sitename.sitename
+                  : data.site.siteMetadata.logo}
+              </div>
+            }
           </AniLink>
           <button
             type="button"
@@ -54,3 +61,11 @@ const Navbar = ({ data }) => {
 }
 
 export default Navbar
+
+export const getSiteName = graphql`
+  query MyQuery {
+    sitename: datoCmsUvod {
+      sitename
+    }
+  }
+`
