@@ -1,5 +1,5 @@
 .hero {
-  min-height: calc(60% - 60px);
+  // min-height: calc(60% - 60px);
   max-width: $container-max-width;
   margin: 0 auto;
   overflow: hidden;
@@ -30,7 +30,7 @@
       left: 17.5%;
     }
     @include large {
-      top: 12vh;
+      top: 6vh;
     }
 
     @include desktop {
