@@ -4,10 +4,10 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Uklidim.cz`,
+    title: `FlexiNa.cz`,
     description: `Nejlepší úklidová společnost v Brně, naši klienti oceňují, jak pracujeme.`,
     author: `@JuanJoseMenaCost`,
-    logo: "PraveCiste",
+    logo: "FlexiNa.cz",
     menuLinks: [
       { name: "Úvod", link: "/" },
       { name: "Jednorázový úklid", link: "/jednorazovy" },
@@ -78,8 +78,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `PraveCiste`,
-        short_name: `PraveCiste`,
+        name: `FlexiNa.cz`,
+        short_name: `FlexiNa.cz`,
         start_url: `/`,
         background_color: `#1d428a`,
         theme_color: `#1d428a`,

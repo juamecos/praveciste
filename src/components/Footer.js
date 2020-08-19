@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="footer__content">
           <div className="footer__column footer__logo">
             <AniLink fade to="/" alt="link to úvod">
-              PraveCiste
+              FlexiNa.cz
             </AniLink>
           </div>
 
@@ -25,12 +25,13 @@ const Footer = () => {
               Adresa
             </h5>
             <a
-              href="https://goo.gl/maps/tqH9RiX7iDE7UUNWA"
+              href="https://goo.gl/maps/DPx1HnvRnC82DbCeA"
               className="footer__text"
             >
-              <p>Ulice 3</p>
-              <p>638 00, Brno</p>
+              <p>Cejl 43/111</p>
+              <p>Brno 602 00</p>
             </a>
+            <p>Ičo: 0776 4162</p>
           </div>
           <div className="footer__column footer__contact">
             <h5 className="footer__title">
@@ -40,12 +41,13 @@ const Footer = () => {
             <div className="footer__text">
               <p>Email:</p>
               <p>
-                <a href="mailto: email@email.cz">email@email.cz</a>
+                <a href="mailto: email@email.cz">kontakt@flexina.cz</a>
               </p>
               <br />
               <p>Telefon:</p>
               <p>
-                <a href="tel:+420789123456">+420 789 123 456</a>
+                <a href="tel:+420731112937">+420731112937</a> <br />
+                <a href="tel:+420721040892">+420721040892</a>
               </p>
             </div>
           </div>
@@ -80,8 +82,9 @@ const Footer = () => {
         </div>
         <div className="footer__divider"></div>
         <div className="footer__copyright">
-          copyright &copy; PraveCiste {new Date().getFullYear()}
-          <div> todos los derechos reservados</div>
+          copyright &copy; FlexiNa.cz {new Date().getFullYear()}
+          <div> všechna práva vyhrazena</div>
+          <div>Powered by menacosta.website</div>
         </div>
       </div>
     </footer>

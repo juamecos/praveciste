@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
+import SEO from "../components/seo"
 import BackgroundSection from "../components/BackgroundSection"
 import PriceTable from "../components/Sections/PriceTable"
 import Section from "../components/Section"
@@ -9,6 +10,7 @@ const sluzby = ({ data, location }) => {
   const path = location
   return (
     <Layout>
+      <SEO title="Jednorázové" />
       <BackgroundSection
         classname="contact__hero-bg"
         image={data.hero.childImageSharp.fluid}
