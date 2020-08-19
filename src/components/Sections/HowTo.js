@@ -77,7 +77,7 @@ const HowTo = () => {
             </p>
           )}
           <a
-            href="tel:+420605476520"
+            href="tel:+420721040892"
             className="btn btn--cta btn--call"
             target="_blank"
             rel="noopener noreferrer"
