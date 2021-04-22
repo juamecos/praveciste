@@ -22,6 +22,7 @@ const Testimonials = () => {
   return (
     <Section
       title={titlesection5 ? titlesection5 : "Co o nás říkají"}
+      classname="testimonials"
       message=""
     >
       <div className="testimonials">

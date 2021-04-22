@@ -14,7 +14,7 @@ const Satisfaction = () => {
           {titlesection2 ? titlesection2 : "100% spokojenost zaručena"}
         </h3>
         <a
-          href="tel:+420721040892"
+          href="tel:+420731112937"
           className="btn btn--cta"
           target="_blank"
           rel="noopener noreferrer"
